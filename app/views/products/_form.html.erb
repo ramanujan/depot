@@ -1,0 +1,24 @@
+<%= form_for @product do |f| %>
+
+    <div>
+	<%=f.label :name, t("new_product_form.name")%>
+	<%=f.text_field :name%>
+	</div>
+
+    <div>
+	<%=f.label :description,t("new_product_form.description")%>
+	<%=f.text_field :description%>
+	</div>
+	
+	<div>
+	<%=f.label :price,t("new_product_form.price")%>
+	<%=f.text_field :price%>
+	</div>
+	
+	<div>
+	
+	<%=f.submit (t("new_product_form.submit")+"&raquo;").html_safe,:class=>"btn btn-success"%>
+	</div>
+	
+	
+<%end%>

@@ -1,0 +1,30 @@
+<div id="navigationbar" class="navbar navbar-fixed-top">
+	<div class="navbar-inner">
+		<div class="container-fluid">
+         
+           <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-eye-open icon-white">
+           </a>
+        
+           
+            <%=link_to "Moquito Shopping",home_path,:class=>"brand"%>
+            
+           
+            <div class="nav-collapse">
+            	<ul class="nav">
+            		<li class="active"><%=link_to t('top_fixed_navbar.home'),home_path%></li>
+                    <li><%=link_to t("top_fixed_navbar.about"),about_path%></li>
+                    <%7.times do%>
+                    <li><%=link_to t("top_fixed_navbar.contact"),contact_path%></li>
+                    <%end%> 
+                
+                </ul>
+            
+                <p class="navbar-text pull-right">Logged in as <%=link_to "Username","#"%></p> 
+            
+            </div>        
+        
+        </div>
+    
+    </div>
+</div>

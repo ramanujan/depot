@@ -5,7 +5,7 @@ gem 'rails', '3.2.2'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
+
 gem 'pg'
 gem 'bootstrap-sass'
 
@@ -20,10 +20,10 @@ end
 gem 'jquery-rails'
 
 group :test, :development  do
-  gem 'rspec-rails'
+  gem 'sqlite3' 
+  gem 'rspec-rails','2.9.0'
   gem 'execjs'
   gem 'therubyracer', :platforms=>:ruby
-  gem 'sqlite3'
 end
 
 group :test do

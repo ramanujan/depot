@@ -1,0 +1,11 @@
+<%unless flash.empty? %>
+  <%flash.each do |k,v|%> 
+    <div class='alert <%="alert-#{k}"%>'>
+    	<a class="close" data-dismiss="alert" href="#">&times;</a>
+    	 <%if k==:block%>
+    	 	<h4 class="alert-heading">Warning!</h4>
+    	<%end%>
+    	<%=v%>
+    </div>
+  <%end%>
+<%end%>

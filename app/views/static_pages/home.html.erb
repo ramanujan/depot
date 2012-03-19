@@ -1,0 +1,9 @@
+<div class="span12">
+	<div class="hero-unit gray_border">
+		<h1 class="page-header"><%=t('homepage.title')%></h1>
+		<p><%=t('homepage.explanation')%></p>
+		<%=link_to t("product.create_product")+"&raquo;".html_safe,
+		new_product_path, :class=>"btn btn-primary"%>
+	</div>
+</div>
+

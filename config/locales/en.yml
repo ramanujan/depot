@@ -2,4 +2,23 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
-  hello: "Hello world"
+  base_title: "Moquito Shopping"
+  top_fixed_navbar:
+    home: "Home"
+    about: "About"
+    contact: "Contact"
+    brand: "Moquito Shopping"
+  homepage: 
+    title: "Moquito Shopping"
+    explanation: "This shopping site is under construction. Please don't bother about it!!"
+  new_product_form:
+    title: "Enter product's details!"
+    name: "Name"
+    description: "Description"
+    price: "Price"
+    submit: "Create Product"
+  new_product:  
+    info: "Product has been created."
+    error: "Product has not been created"
+  show_product_page:
+    generic_product_image: "This product hasn't an image associated"        

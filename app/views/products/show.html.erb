@@ -1,0 +1,24 @@
+<div class="span12">
+	<div class="row-fluid">    
+		
+		<div class="span3">
+        	<%=image_tag("generic_product_large.gif",
+        	:alt=>"generic_product_image",
+        	:title=>t("show_product_page.generic_product_image"),
+        	:class=>"gray_border")%>
+    	
+    	</div>
+    
+    	<div class="span5">
+    	
+    		<h1 class="page-header"><%=@product.name%></h1>
+      	
+   		</div>
+
+   		<div class="span3">
+      		<%=render 'shared/flash_messages'%>
+   		</div> 
+ 	
+ 	</div>
+
+</div>

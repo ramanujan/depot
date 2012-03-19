@@ -1,0 +1,58 @@
+@import 'bootstrap';
+@import 'bootstrap-responsive';
+@import 'color';
+@import 'settings';
+
+/* Some general styles */
+
+.gray_border{
+  border:solid 1px $naiveGray;
+}
+
+body{
+  padding:60px;
+}
+
+
+/* General style for forms. */ 
+
+input, textarea, select, .uneditable-input {
+  border: 1px solid #bbb;
+  width: 100%;
+  padding: 10px;
+  height: auto;
+  margin-bottom: 15px;
+  font-size:1.5em;
+  @include radius-7;
+  
+  
+}
+
+
+/* Generale styling forms's errors*/ 
+
+
+.field_with_errors input,select,textarea {
+  //color: #b94a48;
+  border-color: #b94a48;
+}
+.field_with_errors input:focus,select:focus,textarea:focus {
+  border-color: #953b39;
+  -webkit-box-shadow: 0 0 6px #d59392;
+  -moz-box-shadow: 0 0 6px #d59392;
+  box-shadow: 0 0 6px #d59392;
+}
+
+.field_with_errors label {
+  color:#b94a48;
+}
+
+#alert_alert{
+  padding-left:10px;
+}
+
+
+/* Override Styling page-header */
+
+
+
