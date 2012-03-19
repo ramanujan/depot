@@ -23,4 +23,10 @@ class ProductsController < ApplicationController
     @title="Show product: #{@product.name}" 
   end
 
+  def index
+    
+    @products=Product.all
+    
+  end 
+
 end

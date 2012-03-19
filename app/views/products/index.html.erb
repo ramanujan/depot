@@ -1,0 +1,22 @@
+<div class="span12">
+	 <h1 class="page-header"><%=t("index_products_page.title")%></h1>
+	<%if @products.any?%>
+   		  <%@products.each do |product|%>		
+	 		<div class="row-fluid"> 
+	 			<div class="span3">
+	 				<%=image_tag("generic_product_large.gif",
+        			:alt=>"generic_product_image",
+        			:title=>t("show_product_page.generic_product_image"),
+        			:class=>"gray_border")%>
+        		</div>
+    
+    	        <div class="span5">
+    		    	<%=link_to product_path(product) do%>
+    		    	  <h1 class="page-header"><%=product.name%></h1>
+      			    <%end%>
+      			</div>
+           </div>        
+           <hr />
+      <%end%> 
+    <%end%>
+</div>

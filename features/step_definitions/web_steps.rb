@@ -22,3 +22,10 @@ end
 Then /^I should see "([^"]*)"$/ do |message|
   page.should have_content message
 end
+
+# Qui sotto si utilizza value.inspect. Questo metodo ritorna una versione stampabile della stringa
+# In  pratica la stringa viene stampata con "" e con i caratteri speciali escaped. 
+
+Then /^I should see "([^"]*)" within "([^"]*)"$/ do |value, selector|
+  page.should have_css(selector,:text=>value), "Expected to see #{value.inspect} inside #{selector}, but did not."
+end

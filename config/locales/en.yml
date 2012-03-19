@@ -21,4 +21,6 @@ en:
     info: "Product has been created."
     error: "Product has not been created"
   show_product_page:
-    generic_product_image: "This product hasn't an image associated"        
+    generic_product_image: "This product hasn't an associated image!"
+  index_products_page:
+    title: "Catalog page"          
