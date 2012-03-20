@@ -29,3 +29,9 @@ end
 Then /^I should see "([^"]*)" within "([^"]*)"$/ do |value, selector|
   page.should have_css(selector,:text=>value), "Expected to see #{value.inspect} inside #{selector}, but did not."
 end
+
+
+Then /^I should not see "([^"]*)"$/ do |name|
+   page.should_not have_content name
+end
+

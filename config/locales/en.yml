@@ -12,15 +12,19 @@ en:
     title: "Moquito Shopping"
     explanation: "This shopping site is under construction. Please don't bother about it!!"
   new_product_form:
-    title: "Enter product's details!"
+    title: "Enter product's details:"
     name: "Name"
     description: "Description"
     price: "Price"
     submit: "Create Product"
+  edit_product_form:
+    submit: "Update Product"
+    title: "Edit product's details:"  
   new_product:  
     info: "Product has been created."
     error: "Product has not been created"
   show_product_page:
     generic_product_image: "This product hasn't an associated image!"
   index_products_page:
-    title: "Catalog page"          
+    title: "Catalog page"
+  find_product_error: "The product you are looking for could not be found"              

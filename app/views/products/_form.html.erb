@@ -16,8 +16,11 @@
 	</div>
 	
 	<div>
-	
-	<%=f.submit (t("new_product_form.submit")+"&raquo;").html_safe,:class=>"btn btn-success"%>
+	<%if @product.new_record?%>
+	  <%=f.submit (t("new_product_form.submit")+"&raquo;").html_safe,:class=>"btn btn-success"%>
+	<%else%>
+	  <%=f.submit (t("edit_product_form.submit")+"&raquo;").html_safe,:class=>"btn btn-success"%>
+	<%end%>
 	</div>
 	
 	

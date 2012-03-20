@@ -31,6 +31,12 @@ input, textarea, select, .uneditable-input {
 
 /* Generale styling forms's errors*/ 
 
+a:hover{
+  text-decoration:none;
+}
+
+
+
 
 .field_with_errors input,select,textarea {
   //color: #b94a48;
@@ -52,7 +58,9 @@ input, textarea, select, .uneditable-input {
 }
 
 
-/* Override Styling page-header */
+/* Override Styling btn-group */
 
 
-
+.btn-group .btn{
+  margin-right:5px;
+}  

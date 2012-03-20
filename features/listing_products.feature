@@ -4,10 +4,10 @@ Feature: Listing products
  e scegliere un prodotto da questa lista
  
 Scenario: Listing products
-  Given there is a product named "cucumber"
+  Given there is a product named "Cucumber"
   And I am on the homepage
-  And I follow "Show Projects"
+  And I follow "Show Products"
   Then I should see "Catalog page"
-  When I follow "cucumber"
-  Then I should see "cucumber" within "h1.page-header"
+  When I follow "Cucumber"
+  Then I should see "Cucumber" within "h1.page-header"
    
