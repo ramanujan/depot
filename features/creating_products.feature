@@ -1,5 +1,5 @@
 Feature: Creating products
-  Come utente, voglio 
+  Come utente (seller), voglio 
   andare sulla homepage e creare
   un prodotto facilmente.
 

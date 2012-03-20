@@ -1,6 +1,6 @@
 Feature: Listing products
- Al fine di poter mettere qualche prodotto nel carrello,
- come utente voglio poter accedere ad una lista di prodotti disponibili
+ Al fine di poter manipolari i prodotti,
+ come utente(seller) voglio poter accedere ad una lista di prodotti disponibili
  e scegliere un prodotto da questa lista
  
 Scenario: Listing products

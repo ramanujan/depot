@@ -28,7 +28,7 @@ class ProductsController < ApplicationController
 
   def index
     
-    @products=Product.all
+    @products=Product.order("name asc").all
     @title="Listing products"
   end 
 
@@ -55,6 +55,14 @@ class ProductsController < ApplicationController
  
   end
 
+  # Per il momento piazzo una delete diretta. 
+  
+  def destroy
+    Product.destroy(params[:id])  
+    flash[:info]="Product has been destroyed"
+    redirect_to products_path 
+  end
+
   private
   
   def find_product
@@ -67,5 +75,8 @@ class ProductsController < ApplicationController
     end
      
   end 
+
+  
+
 
 end

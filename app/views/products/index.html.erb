@@ -46,7 +46,11 @@
              	<div class="btn-group">
             		<%=link_to t("product.edit_product"),edit_product_path(product),:class=>"btn btn-success"%>
             		<%=link_to t("product.show_product"),product_path(product),:class=>"btn btn-success"%>
-            		<%=link_to t("product.delete_product"),product_path(product),:class=>"btn btn-danger"%>
+            		<%=link_to t("product.delete_product"),product_path(product),
+            		:method=>:delete,:confirm=>"Are you sure?",
+            		:class=>"btn btn-danger"%>
+            		           
+            		 
     			</div>
             </div>
             <hr />

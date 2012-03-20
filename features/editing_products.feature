@@ -1,5 +1,5 @@
 Feature: Editing products
-  Come utente voglio andare sulla homepage 
+  Come utente(seller) voglio andare sulla homepage 
   e scegliere di accedere ad una lista di prodotti 
   disponibili. A questo punto voglio poter aggiornare i 
   dati di un prodotto facilmente.
