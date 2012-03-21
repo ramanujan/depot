@@ -1,6 +1,6 @@
 @import 'bootstrap';
 @import 'bootstrap-responsive';
-@import 'color';
+@import 'colors';
 @import 'settings';
 
 /* Some general styles */
@@ -13,16 +13,20 @@ body{
   padding:60px;
 }
 
+.metal{
+  @include metalic;
+}
+
 
 /* General style for forms. */ 
 
 input, textarea, select, .uneditable-input {
   border: 1px solid #bbb;
   width: 100%;
-  padding: 10px;
+  //padding: 10px;
   height: auto;
   margin-bottom: 15px;
-  font-size:1.5em;
+  font-size:1em;
   @include radius-7;
   
   
@@ -38,16 +42,43 @@ a:hover{
 
 
 
-.field_with_errors input,select,textarea {
+.field_with_errors input{
   //color: #b94a48;
   border-color: #b94a48;
 }
-.field_with_errors input:focus,select:focus,textarea:focus {
+
+
+.field_with_errors select{
+  border-color: #b94a48;
+}
+
+
+.field_with_errors textarea{
+  border-color: #b94a48;  
+}
+
+.field_with_errors input:focus {
   border-color: #953b39;
   -webkit-box-shadow: 0 0 6px #d59392;
   -moz-box-shadow: 0 0 6px #d59392;
   box-shadow: 0 0 6px #d59392;
 }
+
+.field_with_errors select:focus{
+  border-color: #953b39;
+  -webkit-box-shadow: 0 0 6px #d59392;
+  -moz-box-shadow: 0 0 6px #d59392;
+  box-shadow: 0 0 6px #d59392;
+  }
+
+
+.field_with_errors textarea:focus{
+  border-color: #953b39;
+  -webkit-box-shadow: 0 0 6px #d59392;
+  -moz-box-shadow: 0 0 6px #d59392;
+  box-shadow: 0 0 6px #d59392;
+}
+
 
 .field_with_errors label {
   color:#b94a48;
@@ -55,6 +86,7 @@ a:hover{
 
 #alert_alert{
   padding-left:10px;
+  
 }
 
 
@@ -63,4 +95,46 @@ a:hover{
 
 .btn-group .btn{
   margin-right:5px;
-}  
+} 
+
+.alert-error{
+  ul{
+     font-size:80%; 
+     li{
+       margin-bottom:10px;
+       line-height:110%;
+     }
+    }
+  }
+ 
+.alert-block{
+  font-size:70%;
+  line-height:110%;
+}
+
+
+/* LightBox */ 
+
+.lightbox_overlay { //La copertura, sopra la quale va il container 
+  
+  position:absolute;
+  top:40%;
+  left:40%;
+  height:50%;
+  width:50%;
+  background:black url(second_loader.gif) no-repeat scroll center center;
+  border:solid 1px #c1c1c1;
+
+}
+
+#lightbox_container {
+  
+  position:absolute;
+  top:50%;
+  left:41%;
+ 
+  background:transparent;
+  color:#fff;
+  opacity:1;
+}
+

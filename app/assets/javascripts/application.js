@@ -35,3 +35,18 @@
 
 // require_self
 
+$(document).ready(function(){
+	$('a.lightbox').click(function(){
+		var con = $("<div>Domenico D'Egidio.</div>")
+		.addClass("lightbox_overlay")
+		.css('opacity','1')
+		.animate({'opacity':'0.7'},'slow')
+		.appendTo('body');
+	      
+	    $("<div id='lightbox_container'>Puts chat text here.loremwewekjrhwkjrweh</div>")
+	    .appendTo('body');
+	    return;    
+	})
+	
+	
+})

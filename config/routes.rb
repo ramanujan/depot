@@ -1,5 +1,7 @@
 Depot::Application.routes.draw do
 
+  get "store/index"
+
   get "static_pages/home"
 
   get "static_pages/about"
