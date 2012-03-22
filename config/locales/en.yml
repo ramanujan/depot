@@ -2,29 +2,49 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
-  base_title: "Moquito Shopping"
-  top_fixed_navbar:
-    home: "Home"
-    about: "About"
-    contact: "Contact"
-    brand: "Moquito Shopping"
-  homepage: 
-    title: "Moquito Shopping"
-    explanation: "This shopping site is under construction. Please don't bother about it!!"
-  new_product_form:
-    title: "Enter product's details:"
-    name: "Name"
-    description: "Description"
-    price: "Price"
-    submit: "Create Product"
-  edit_product_form:
-    submit: "Update Product"
-    title: "Edit product's details:"  
-  new_product:  
-    info: "Product has been created."
-    error: "Product has not been created"
-  show_product_page:
-    generic_product_image: "This product hasn't an associated image!"
-  index_products_page:
-    title: "Catalog page"
-  find_product_error: "The product you are looking for could not be found"              
+  home: "Home"
+  about: "About"
+  contact: "Contact"
+  brand: "Moquito Shopping"
+  chat: "Chat (Beta V.) system"
+  explanation: "This shopping site is under construction. Please don't bother about it!!"
+  
+  products:
+    create:
+      success: "Product has been created."
+      error: "Product has not been created"  
+    new:
+      page:
+        heading: "Enter product's details:"
+      form:
+        name: "Name"
+        description: "Description"
+        price: "Price"
+        submit: "Create Product"
+    edit:
+      page:
+        heading: "Edit product's details:"
+      form: 
+        submit: "Update Product"
+    update:
+      success: "Product has been updated"
+      error: "Product has not been updated"
+    show:
+      page:
+        missing_image: "This product hasn't an associated image" 
+    index:
+      page:
+        heading: "Products"
+    find:
+      error: "The product you are looking for could not be found"    
+  line_items:
+    find_product:
+      error: "The product you are looking for could not be found"
+    create:
+      success: "The product has been added to cart"   
+      error: "The product hasn't been added to cart"
+  store:
+    index:
+      page:
+        cart_button: "Add to Cart"
+                  

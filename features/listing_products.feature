@@ -7,7 +7,7 @@ Scenario: Listing products
   Given there is a product named "Cucumber"
   And I am on the homepage
   And I follow "Show Products"
-  Then I should see "Catalog page"
+  Then I should see "Products"
   When I follow "Cucumber"
-  Then I should see "Cucumber" within "h1.page-header"
+  Then I should see "Cucumber"
    

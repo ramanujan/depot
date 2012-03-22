@@ -2,34 +2,45 @@
 	
 	 <div class="row-fluid">
 	 
-	   <div class="span10">
-	   		<h1><%=t("index_products_page.title")%></h1>
-	        <hr/>
+	 	<div class="span7">
+	   		<h1><%=t("products.index.page.heading")%></h1>
 	   </div> 
 	 
-	   <div class="span2">
+	   <div class="span5">
 	     <%=render 'shared/flash_messages'%>
 	   </div>
 	 
 	 </div>
-	 
-	 <%if @products.any?%>
-   		  <%@products.each do |product|%>		
-	 		<div class="row-fluid"> 
-	 			
-	 			<div class="span2">
-	 				<%=image_tag("generic_product_large.gif",
-        			:alt=>"generic_product_image",
-        			:title=>t("show_product_page.generic_product_image"),
-        			:class=>"gray_border")%>
+     <hr />
+		 <%if @products.any?%>
+	   		  <%@products.each do |product|%>		
+		 		<div class="row-fluid"> 
+		 			
+		 			<div class="span3">
+		 				
+		 				<div class="row-fluid">   	
+		 					<%=image_tag("generic_product_large.gif",
+        						:alt=>t("products.show.page.missing_image"),
+        						:title=>t("products.show.page.missing_image"),
+        						:class=>"gray_border")%>
+        				</div>
+        		    
+        		    <div class="row-fluid">
+        		    	<div class="span4">
+        		    		<div class="product_price">
+        		    			 <%=number_to_currency(product.price)%>
+        		        	</div> 
+        		    	</div>
+                   </div>
+        		      
         		</div>
     
-    	        <div class="span10">
+    	        <div class="span9">
     		       
     		       <div class="row-fluid">
     		         <h1>
-    		         
-    		         	<%=(product.name)%>
+    		         	<%=link_to (product.name), store_product_path(product)%>
+    		         	
     		                
     		         </h1>    
     		          
@@ -39,7 +50,19 @@
       			     <div class="product_description">
       			     	<%=sanitize(product.description)%>
       			     </div>
-      			    
+      			     
+      			     <div>        		    
+        		   			<!--Si noti come sia possibile passare parametri  
+        		   				attraverso un helper. Vengono aggiunti come
+        		   				query string in questo modo. Ad esempio:
+        		   				action="/line_items?product_id=12"
+        		   				-->
+        		   			<%=button_to(t("store.index.page.cart_button"),
+        		   			line_items_path(:product_id=>product.id),
+        		   			:class=>"btn btn-primary")%>
+                    </div>   
+      			     
+      			     
       			   </div> 
       			
       			</div>
@@ -47,9 +70,7 @@
       		</div>        
             
             
-            <div class="product_price">
-      	      <%=number_to_currency(product.price)%>
-      	    </div> 
+         
             
             <br/>	
             <hr />

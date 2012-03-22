@@ -11,10 +11,10 @@ class ProductsController < ApplicationController
     @product = Product.new params[:product] 
     
     if @product.save 
-      flash[:info]=t("new_product.info")
+      flash[:info]=t("products.create.success")
       redirect_to product_path(@product)
     else
-      flash[:block]=t("new_product.error")
+      flash[:block]=t("products.create.error")
       @title="Product create errors"
       render 'new'
     end
@@ -40,10 +40,10 @@ class ProductsController < ApplicationController
   def update
     begin     
       if @product.update_attributes(params[:product])
-        flash[:info]="Product has been updated"
+        flash[:info]=t("products.update.success")
         redirect_to products_path
     else
-        flash[:block]="Product has not been updated"
+        flash[:block]=t("products.update.error")
         @title="Product update errors"
         render 'new'
     end
@@ -69,7 +69,7 @@ class ProductsController < ApplicationController
     begin
       @product = Product.find(params[:id])  
     rescue
-      flash[:block]=t("find_product_error")
+      flash[:block]=t("products.find.error")
       redirect_to products_path 
       return
     end

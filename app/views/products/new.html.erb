@@ -2,9 +2,9 @@
     
 	<div class="span6">
         <%if @product.new_record?%>
-          <h1 class="page-header"><%=t("new_product_form.title")%></h1>
+          <h1 class="page-header"><%=t("products.new.page.heading")%></h1>
     	<%else%>
-    	  <h1 class="page-header"><%=t("edit_product_form.title")%></h1>
+    	  <h1 class="page-header"><%=t("products.edit.page.heading")%></h1>
     	<%end%>
     	 
     	<%=render 'form'%>

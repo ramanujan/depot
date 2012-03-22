@@ -1,25 +1,25 @@
 <%= form_for @product do |f| %>
 
     <div>
-	<%=f.label :name, t("new_product_form.name")%>
+	<%=f.label :name, t("products.new.form.name")%>
 	<%=f.text_field :name%>
 	</div>
 
     <div>
-	<%=f.label :description,t("new_product_form.description")%>
+	<%=f.label :description,t("products.new.form.description")%>
 	<%=f.text_area :description,:rows=>3%>
 	</div>
 	
 	<div>
-	<%=f.label :price,t("new_product_form.price")%>
+	<%=f.label :price,t("products.new.form.price")%>
 	<%=f.text_field :price%>
 	</div>
 	
 	<div>
 	<%if @product.new_record?%>
-	  <%=f.submit (t("new_product_form.submit")+"&raquo;").html_safe,:class=>"btn btn-success"%>
+	  <%=f.submit (t("products.new.form.submit")+"&raquo;").html_safe,:class=>"btn btn-success"%>
 	<%else%>
-	  <%=f.submit (t("edit_product_form.submit")+"&raquo;").html_safe,:class=>"btn btn-success"%>
+	  <%=f.submit (t("products.edit.form.submit")+"&raquo;").html_safe,:class=>"btn btn-success"%>
 	<%end%>
 	</div>
 	

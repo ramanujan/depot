@@ -3,7 +3,7 @@
 	 <div class="row-fluid">
 	 	
 	   <div class="span8">
-	   		<h1><%=t("index_products_page.title")%></h1>
+	   		<h1><%=t("products.index.page.heading")%></h1>
 	       
 	   </div> 
 	    
@@ -20,9 +20,10 @@
 	 	     <div class="row-fluid"> 
 	 			<div class="span2">
 	 				<%=image_tag("generic_product_large.gif",
-        			:alt=>"generic_product_image",
-        			:title=>t("show_product_page.generic_product_image"),
-        			:class=>"gray_border")%>
+        				:alt=>t("products.show.page.missing_image"),
+        				:title=>t("products.show.page.missing_image"),
+        				:class=>"gray_border")%>
+    	
         		</div>
     
     	        <div class="span10">

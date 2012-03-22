@@ -7,17 +7,17 @@
            </a>
         
            
-            <%=link_to "Moquito Shopping",home_path,:class=>"brand"%>
+            <%=link_to t("brand"),home_path,:class=>"brand"%>
             
            
             <div class="nav-collapse">
             	<ul class="nav">
-            		<li class="active"><%=link_to t('top_fixed_navbar.home'),home_path%></li>
-                    <li><%=link_to t("top_fixed_navbar.about"),about_path%></li>
+            		<li class="active"><%=link_to t('home'),home_path%></li>
+                    <li><%=link_to t("about"),about_path%></li>
                     <%7.times do%>
-                    <li><%=link_to t("top_fixed_navbar.contact"),contact_path%></li>
+                    <li><%=link_to t("contact"),contact_path%></li>
                     <%end%> 
-                    <li><%=link_to "Chat","#",:class=>"lightbox"%></li>  
+                    <li><%=link_to t("chat"),"#",:class=>"lightbox"%></li>  
                 </ul>
             
                 <p class="navbar-text pull-right">Logged in as <%=link_to "Username","#"%></p> 

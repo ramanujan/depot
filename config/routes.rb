@@ -1,7 +1,5 @@
 Depot::Application.routes.draw do
 
-  get "store/index"
-
   get "static_pages/home"
 
   get "static_pages/about"
@@ -15,7 +13,13 @@ Depot::Application.routes.draw do
   get '/contact', to:"static_pages#contact"
   get '/heroku_reset', to:"static_pages#heroku_db_reset"
   get '/heroku_migrate', to:"static_pages#heroku_db_migrate"
+  
+  get '/store', to:"store#index"
+  get '/store/products/:product_id/', 
+       :to => 'store#show',
+       :as => :store_product
+    
   resources :products
-   
+  resources :line_items, :only=>[:create]  
  
 end

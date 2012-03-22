@@ -1,0 +1,50 @@
+<div class="span11 metal">
+	<div class="row-fluid">    
+		
+		<div class="span3">
+        	<%=image_tag("generic_product_large.gif",
+        	:alt=>t("products.show.page.missing_image"),
+        	:title=>t("products.show.page.missing_image"),
+        	:class=>"gray_border")%>
+    	
+    	</div>
+    
+    	
+    	<div class="span8">
+    		
+    		<hr />
+    		
+    		<div class="row-fluid">
+    			<div class="span6">
+    			 	 <h1><%=@product.name%></h1>
+    		    </div>	
+      	        
+      	        <div class="span5">
+      	    		<%=number_to_currency(@product.price)%>
+      	   	     	<hr />
+      	   	     	<%=button_to(t("store.index.page.cart_button"),
+        		   			line_items_path(:product_id=>@product.id),
+        		   			:class=>"btn btn-primary")%>
+      	   		</div>
+      	         
+      	    
+      	    </div>
+      	    <hr /> 
+      	    
+      	    <div class="row-fluid">
+      	      <div class="span11"> 
+      	       <%=sanitize(@product.description)%>
+      	     </div>
+      	    </div>
+      	
+      	
+      	</div>
+   		
+
+   		<div class="span2">
+      		<%=render 'shared/flash_messages'%>
+   		</div> 
+ 	
+ 	</div>
+
+</div>
